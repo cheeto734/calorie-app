@@ -1,0 +1,259 @@
+.meal-planning {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.upload-section {
+  margin-bottom: 3rem;
+}
+
+.upload-area {
+  border: 3px dashed var(--primary-color);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  background: var(--card-background);
+  transition: all 0.3s;
+}
+
+.upload-area:hover {
+  border-color: var(--primary-dark);
+  background: var(--primary-light);
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-label {
+  cursor: pointer;
+  display: block;
+}
+
+.upload-icon {
+  font-size: 4em;
+  margin-bottom: 1rem;
+}
+
+.upload-label h3 {
+  color: var(--text-dark);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.upload-label p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.file-types {
+  display: block;
+  font-size: 0.9em;
+  color: #999;
+  margin-top: 1rem;
+}
+
+.preview-section {
+  text-align: center;
+}
+
+.image-preview {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.clear-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #ff4444;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-button:hover {
+  background: #ff4444;
+  color: white;
+  transform: rotate(90deg);
+}
+
+.generate-button {
+  font-size: 1.2em;
+  padding: 1rem 3rem;
+  background: var(--primary-color);
+  margin-top: 1rem;
+}
+
+.generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.suggestions-section {
+  margin-top: 3rem;
+}
+
+.detected-ingredients {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.detected-ingredients h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-dark);
+}
+
+.ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ingredient-tag {
+  background: var(--primary-color);
+  color: var(--text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.95em;
+}
+
+.suggestions-section h2 {
+  text-align: center;
+  margin: 2rem 0 1.5rem 0;
+  color: var(--text-dark);
+}
+
+.meal-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.meal-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.meal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(144, 238, 144, 0.2);
+}
+
+.meal-header {
+  background: var(--primary-color);
+  padding: 1.5rem;
+}
+
+.meal-header h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-dark);
+  font-size: 1.4em;
+}
+
+.meal-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95em;
+  color: var(--text-dark);
+}
+
+.calories, .prep-time {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+.meal-body {
+  padding: 1.5rem;
+}
+
+.meal-ingredients, .meal-instructions {
+  margin-bottom: 1.5rem;
+}
+
+.meal-ingredients h4, .meal-instructions h4 {
+  color: var(--text-dark);
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1em;
+}
+
+.meal-ingredients ul, .meal-instructions ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.meal-ingredients li, .meal-instructions li {
+  margin-bottom: 0.5rem;
+}
+
+.api-notice {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #fff9e6;
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+}
+
+.api-notice p {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+}
+
+.api-notice ul {
+  margin: 0.5rem 0 0 1.5rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .meal-planning {
+    padding: 1rem;
+  }
+
+  .upload-area {
+    padding: 2rem 1rem;
+  }
+
+  .meal-cards {
+    grid-template-columns: 1fr;
+  }
+}
